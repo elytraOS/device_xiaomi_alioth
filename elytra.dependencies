@@ -1,19 +1,17 @@
-# Nuke 
-rm -rf hardware/qcom-caf/sm8250/display 
-rm -rf hardware/qcom-caf/sm8250/audio
-rm -rf hardware/qcom-caf/sm8250/media
-
-# Hals
-git clone https://github.com/PixelExperience/hardware_qcom-caf_sm8250_media -b twelve hardware/qcom-caf/sm8250/media
-git clone https://github.com/PixelExperience/hardware_qcom-caf_sm8250_audio -b twelve hardware/qcom-caf/sm8250/audio
-git clone https://github.com/PixelExperience/hardware_qcom-caf_sm8250_display -b twelve hardware/qcom-caf/sm8250/display
-
-# Device
-git clone https://github.com/mxcion/device_xiaomi_sm8250-common -b s device/xiaomi/sm8250-common
-
-# Vendor
-git clone https://github.com/drkphnx/vendor_xiaomi -b 12.1 vendor/xiaomi/
-
-# Kernel & Clang
-git clone -b android12-stable --depth=1 https://github.com/UtsavBalar1231/kernel_xiaomi_sm8250 kernel/xiaomi/sm8250
-git clone -b master --depth=1 https://github.com/kdrag0n/proton-clang.git prebuilts/clang/host/linux-x86/clang-proton
+[
+  {
+    "repository": "vendor_xiaomi-sm8250",
+    "target_path": "vendor/xiaomi",
+    "branch": "scorch"
+  },
+  {
+    "repository": "device_xiaomi_sm8250-common",
+    "target_path": "device/xiaomi/sm8250-common",
+    "branch": "scorch"
+  },
+  {
+    "repository": "kernel_xiaomi_sm8250",
+    "target_path": "kernel/xiaomi/sm8250",
+    "branch": "scorch"
+  }
+]
